@@ -1,4 +1,4 @@
-# Makefile for AirTAK
+# Makefile for SeaTAK
 #
 # Copyright 2023 Sensors & Signals LLC
 #
@@ -22,7 +22,7 @@ pi-gen:
 	touch ./pi-gen/stage2/SKIP_IMAGES ./pi-gen/stage2/SKIP_NOOBS
 
 copy:
-	rsync -va ../airtak kelp.local:~/src/SNS/
+	rsync -va ../seatak kelp.local:~/src/SNS/
 
 sync: copy
 

@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = "AirTAK"
+project = "SeaTAK"
 copyright = "2023 Sensors & Signals LLC"
 author = "Greg Albrecht"
 

@@ -1,0 +1,6 @@
+gpsd 
+gpsd-clients
+# Needy developer:
+git
+tmux 
+vim

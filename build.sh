@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# build.sh for AirTAK
+# build.sh for SeaTAK
 #
 # Copyright 2023 Sensors & Signals LLC
 #

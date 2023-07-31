@@ -2,14 +2,14 @@
 
 ## Web Configuration
 
-Many functions of the AirTAK can be controlled, configured and monitored via the AirTAK 
-Web page. When connecting directly to the AirTAK in Hotspot mode (via AirTAK-XXXX WiFi Network) you can access the AirTAK Web page by visiting [http://airtak.local](http://airtak.local) from your Chrome or Safari web browser (Android & iOS) or in Edge, Chrome or Safari on you computer.
+Many functions of the SeaTAK can be controlled, configured and monitored via the SeaTAK 
+Web page. When connecting directly to the SeaTAK in Hotspot mode (via SeaTAK-XXXX WiFi Network) you can access the SeaTAK Web page by visiting [http://seatak.local](http://seatak.local) from your Chrome or Safari web browser (Android & iOS) or in Edge, Chrome or Safari on you computer.
 
 ### Connect to WiFI
 
-**N.B.**: If you are connected to AirTAK via the WiFi Hospot (AirTAK-XXXX), reconfiguring the WiFi to connect to another network will terminate your Hospot connection. To reach the AirTAK Web page after this point, you'll need to connect to the same network as AirTAK.
+**N.B.**: If you are connected to SeaTAK via the WiFi Hospot (SeaTAK-XXXX), reconfiguring the WiFi to connect to another network will terminate your Hospot connection. To reach the SeaTAK Web page after this point, you'll need to connect to the same network as SeaTAK.
 
-1. Connect to the AirTAK WiFi network and browse to http://airtak.local
+1. Connect to the SeaTAK WiFi network and browse to http://seatak.local
 2. Click the WiFi configuration option.
 3. Enter WiFi credentials and apply.
 
@@ -31,12 +31,12 @@ For advanced users. These steps require familiarity with command-line terminals 
 
 ### Change default password
 
-The AirTAK OS image contains a user with a default password. It is recommended that the 
-owner of AirTAK gateway change this password.
+The SeaTAK OS image contains a user with a default password. It is recommended that the 
+owner of SeaTAK gateway change this password.
 
 To change the default password:
 
-1. SSH into AirTAK: ``ssh pi@airtak.local``
+1. SSH into SeaTAK: ``ssh pi@seatak.local``
 2. Change the password: ``passwd``
 
 **Please make note of this password. There is no password recovery feature.**
@@ -45,24 +45,24 @@ See also: [Raspberry Pi Insecure first user](https://www.raspberrypi.com/news/ra
 
 ### Change TAK / CoT Destination
 
-By default, AirTAK sends Cursor on Target messages to the ATAK Mesh SA multicast group & port: ``udp://239.2.3.1:6969`` (expressed as a read-only port via ``udp+wo://...``). 
+By default, SeaTAK sends Cursor on Target messages to the ATAK Mesh SA multicast group & port: ``udp://239.2.3.1:6969`` (expressed as a read-only port via ``udp+wo://...``). 
 
-To send CoT to a different destination, you'll need to SSH into AirTAK and change the 
+To send CoT to a different destination, you'll need to SSH into SeaTAK and change the 
 configuration for ``adsbcot``.
 
-1. SSH into AirTAK: ``ssh pi@airtak.local``
+1. SSH into SeaTAK: ``ssh pi@seatak.local``
 2. Edit adsbcot's configuration: ``sudo nano /boot/adsbcot-config.txt`` (N.B. This is *not* an INI-style file.)
 3. Save & reboot.
 
 
 ### Change dump1090-fa & dump978-fa SDR serial numbers
 
-AirTAK comes with SDR serial numbers hard-coded for the AirTAK v1 hardware kit. If 
-you’re using the AirTAK OS with other SDRs, you’ll need to change these hard-coded values.
+SeaTAK comes with SDR serial numbers hard-coded for the SeaTAK v1 hardware kit. If 
+you’re using the SeaTAK OS with other SDRs, you’ll need to change these hard-coded values.
 
 #### Changing dump1090-fa SDR serial number
 
-1. SSH into the AirTAK: ``ssh pi@airtak.local``
+1. SSH into the SeaTAK: ``ssh pi@seatak.local``
 2. List the serial numbers of the installed SDRs by typing the command: ``rtl_test``
 
 ![Example rtl_test output with 1 SDR.](https://images.squarespace-cdn.com/content/v1/6477cab5986c146297acea21/8d1ecb30-17f4-4225-a7c6-76eca789b645/Screen+Shot+2023-07-08+at+11.48.45+AM.png)
@@ -79,7 +79,7 @@ you’re using the AirTAK OS with other SDRs, you’ll need to change these hard
 
 ### Changing dump978-fa SDR serial number
 
-1. SSH into the AirTAK: ``ssh pi@airtak.local``
+1. SSH into the SeaTAK: ``ssh pi@seatak.local``
 2. List the serial numbers of the installed SDRs by typing the command: ``rtl_test``
 3. Using the Nano text editor, open the dump978-fa configuration file: 
 ``sudo nano /etc/default/dump978-fa``
